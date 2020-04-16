@@ -1,0 +1,133 @@
+<html>
+<head>
+<title>JASH</title>
+<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="menu-bar">
+<ul>
+    <li class="active"><a href="#"><i class="fa fa-home"></i>Home</a></li>
+    <li><a href="#"><i class="fa fa-shopping-cart"></i>Categories</a>
+    <div class="sub-menu-1">
+    <ul>
+        <li class="hover-me"><a href="#">Men</a><i class="fa fa-angle-right"></i>
+            <div class="sub-menu-2">
+        <ul>
+            <li><a href="menjeans.html">Jeans</a></li>
+            <li><a href="menscasual.html">Casual Shirts</a></li>
+            <li><a href="mensethnic.html">Ethic Wear</a></li>
+            <li><a href="mensshoes.html">Shoes</a></li>
+            <li><a href="menssunglasses.html">Sun Glasses</a></li>
+            <li><a href="menswallets.html">Wallets</a></li>
+            <li><a href="menswatches.html">Watches</a></li>
+        </ul>
+            </div>
+        </li>
+        <li class="hover-me"><a href="#">Women</a><i class="fa fa-angle-right"></i>
+            <div class="sub-menu-2">
+        <ul>
+            <li><a href="womensjeans.html">Jeans</a></li>
+            <li><a href="womenscasual.html">Casual Wear</a></li>
+            <li><a href="womensfootwear.html">Footwear</a></li>
+            <li><a href="womenshandbags.html">Handbags</a></li>
+            <li><a href="womensjewellery.html">Jewellery</a></li>
+            <li><a href="womensmakeup.html">Make up</a></li>
+            <li><a href="womensperfumes.html">Perfumes</a></li>
+            <li><a href="womenswatches.html">Watches</a></li>
+        </ul>
+            </div>
+        </li>
+        <li class="hover-me"><a href="#">Electronics</a><i class="fa fa-angle-right"></i>
+        <div class="sub-menu-2">
+        <ul>
+            <li><a href="phonesandaccessories.html">Phones & Accessories</a></li>
+            </ul>
+        </div>
+        </li>
+        <li class="hover-me"><a href="#">Stationery</a><i class="fa fa-angle-right"></i>
+                <div class="sub-menu-2">
+        <ul>
+            <li><a href="officeproducts.html">Office Products</a></li>
+            <li><a href="backpacks.html">Backpacks</a></li>
+        </ul>
+            </div>
+        </li>
+        </ul>
+    </div>
+    </li>
+    <li><a href="offers.html"><i class="fa fa-tags"></i>Offers</a></li>
+    <li><a href="plans.html"><i class="fa fa-inr"></i>Plans</a></li>
+    <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact</a></li>
+    <li><a href="#"><i class="fa fa-user-plus"></i>Sign In</a></li>
+</ul>
+ <input type="text" placeholder="Search..">
+</div>
+<br><br><br><br><br>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="img1.jpg" style="width:100%">
+    <div class="text">Caption Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="img2.jpg" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="img3.jpg" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>
